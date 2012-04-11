@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<com.google.ads.AdView android:id="@+id/adView"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:layout_alignParentTop="true" ads:adUnitId="a14dfb6cec90af7"
+		ads:adSize="BANNER" ads:loadAdOnCreate="false" />
+
+
+	<Button android:id="@+id/mosq" android:layout_height="wrap_content"
+		android:layout_width="fill_parent" android:text="Mosquitos"
+		android:layout_below="@+id/adView" />
+
+	<Button android:id="@+id/rats" android:layout_height="wrap_content"
+		android:layout_width="fill_parent" android:text="Rats"
+		android:layout_below="@+id/mosq" />
+
+	<Button android:id="@+id/mice" android:layout_height="wrap_content"
+		android:layout_width="fill_parent" android:text="Mice"
+		android:layout_below="@+id/rats" />
+
+	<Button android:id="@+id/roaches" android:layout_height="wrap_content"
+		android:layout_width="fill_parent" android:text="Roaches"
+		android:layout_below="@+id/mice" />
+	<TableRow android:layout_below="@+id/roaches" android:gravity="top"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:id="@+id/ffrequencytable">
+		<TextView android:text="Play Time (seconds)" android:id="@+id/belowertext"
+			android:layout_weight="1" android:layout_width="fill_parent"
+			android:layout_height="wrap_content"></TextView>
+		<EditText android:layout_width="fill_parent" android:id="@+id/duration"
+			android:layout_weight="1" android:text="3" android:numeric="integer"
+			android:layout_height="wrap_content"></EditText>
+	</TableRow>
+	<Button android:id="@+id/pause" android:layout_height="wrap_content"
+		android:layout_below="@+id/ffrequencytable" android:layout_width="fill_parent"
+		android:text="STOP" />
+
+
+	<TextView android:text="Bonus - Generate specific frequencies to test."
+		android:id="@+id/belowtext" android:layout_above="@+id/frequencytable"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"></TextView>
+
+	<TableRow android:layout_alignParentBottom="true"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:id="@+id/frequencytable">
+		<Button android:id="@+id/freqbutton" android:layout_height="wrap_content"
+			android:layout_width="wrap_content" android:text="Play Frequency Hz" />
+		<EditText android:layout_width="fill_parent" android:id="@+id/freqbonus"
+			android:text="1200" android:numeric="decimal" android:layout_height="wrap_content"></EditText>
+	</TableRow>
+</RelativeLayout>
